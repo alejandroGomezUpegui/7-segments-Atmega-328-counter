@@ -19,6 +19,7 @@
 
 int a = 0;
 int led[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7C, 0x7, 0x7F, 0x67, 0x00};
+//7seg number 0     1     2     3     4     5    6     7     8     9    all segments off
 	
 static inline void initADC0(void) {
 	ADMUX |= (1 << REFS0); // Voltage de referencia capacitor externo Avcc 1uf table 24.3 248
