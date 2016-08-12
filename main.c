@@ -4,7 +4,7 @@
  */ 
 
 //SEVEN SEGMENTS CONECTIONS
-//Display a segment -- D0 atmel port
+//Display a segment     -- D0 atmel port
 //Display b segment	-- D1 atmel port
 //Display c segment	-- D2 atmel port
 //Display d segment	-- D3 atmel port
@@ -28,7 +28,7 @@ static inline void initADC0(void) {
 }
 
 int main(void) {
-	int tiempo = 200;
+	int tiempo = 500;
 			
 	initADC0(); // Llamando el seteo de la funcion ADC0 que esta en adc.h
 	
@@ -37,7 +37,7 @@ int main(void) {
 	PORTC |= (1 << PINC1);	// Se cierra la resistencia el transistor de salida se conecta
 	
 	while(1){
-		for (int i=0; i<9; i++)
+		for (int i=0; i<10; i++)
 		{
 			PORTD |= led[i];
 			_delay_ms(tiempo);
